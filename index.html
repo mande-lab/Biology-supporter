@@ -702,8 +702,8 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 60%;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            height: 70%; /* Increased coverage */
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); /* Darker gradient */
             z-index: 1;
         }
 
@@ -719,11 +719,15 @@
             font-size: 1.8rem;
             margin-bottom: 5px;
             color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9); /* Stronger shadow */
+            letter-spacing: 0.5px; /* Better spacing */
         }
 
         .biologist-name .years {
             color: var(--secondary);
-            font-weight: 500;
+            font-weight: 600; /* Bolder font */
+            text-shadow: 0 1px 5px rgba(0,0,0,0.8); /* Added shadow */
+            font-size: 1.25rem; /* Slightly larger */
         }
 
         .biologist-info {
@@ -962,6 +966,18 @@
                 height: 220px;
             }
         }
+
+        /* Added styles for placeholder images */
+        .placeholder-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0e0e0;
+            color: #999;
+            height: 100%;
+            width: 100%;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -1113,53 +1129,54 @@
             </div>
         </section>
 
+      
         <!-- Diagrams Section -->
-        <section id="diagrams-section" class="content-section">
-            <button class="back-btn" onclick="showSection('home')"><i class="fas fa-arrow-left"></i> Back to Home</button>
-            <h2 class="section-title">Important Biology Diagrams</h2>
-            
-            <div class="diagrams-grid">
-                <div class="diagram-card">
-                    <div class="diagram-img">
-                        <img src="https://ibb.co/Swcv188p" alt="Animal Cell Diagram">
-                    </div>
-                    <div class="diagram-info">
-                        <h3>Animal Cell Structure</h3>
-                        <p>Detailed diagram showing all organelles in a typical animal cell including nucleus, mitochondria, endoplasmic reticulum, and Golgi apparatus.</p>
-                    </div>
-                </div>
-                
-                <div class="diagram-card">
-                    <div class="diagram-img">
-                        <img src="https://ibb.co/99KG9J8k" alt="Plant Cell Diagram">
-                    </div>
-                    <div class="diagram-info">
-                        <h3>Plant Cell Structure</h3>
-                        <p>Illustration of a plant cell highlighting unique features like cell wall, chloroplasts, and large central vacuole.</p>
-                    </div>
-                </div>
-                
-                <div class="diagram-card">
-                    <div class="diagram-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/800px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png" alt="DNA Structure">
-                    </div>
-                    <div class="diagram-info">
-                        <h3>DNA Double Helix</h3>
-                        <p>Diagram of DNA structure showing the double helix, nucleotide base pairing (A-T, G-C), and phosphate-sugar backbone.</p>
-                    </div>
-                </div>
-                
-                <div class="diagram-card">
-                    <div class="diagram-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Simple_photosynthesis_overview.svg/800px-Simple_photosynthesis_overview.svg.png" alt="Photosynthesis">
-                    </div>
-                    <div class="diagram-info">
-                        <h3>Photosynthesis Process</h3>
-                        <p>Diagram illustrating the process of photosynthesis including light-dependent and light-independent reactions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <section id="diagrams-section" class="content-section">
+  <button class="back-btn" onclick="showSection('home')"><i class="fas fa-arrow-left"></i> Back to Home</button>
+  <h2 class="section-title">Important Biology Diagrams</h2>
+
+  <div class="diagrams-grid">
+    <div class="diagram-card">
+      <div class="diagram-img">
+        <img src="animal_cell_structure.jpg" alt="Animal Cell Diagram">
+      </div>
+      <div class="diagram-info">
+        <h3>Animal Cell Structure</h3>
+        <p>Detailed diagram showing all organelles in a typical animal cell including nucleus, mitochondria, endoplasmic reticulum, and Golgi apparatus.</p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-img">
+        <img src="Plant-cell.png"Plant Cell Diagram">
+      </div>
+      <div class="diagram-info">
+        <h3>Plant Cell Structure</h3>
+        <p>Illustration of a plant cell highlighting unique features like cell wall, chloroplasts, and large central vacuole.</p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-img">
+        <img src="DNA_stra.jpg" alt="DNA Double Helix">
+      </div>
+      <div class="diagram-info">
+        <h3>DNA Double Helix</h3>
+        <p>Diagram of DNA structure showing the double helix, nucleotide base pairing (A–T, G–C), and phosphate-sugar backbone.</p>
+      </div>
+    </div>
+
+    <div class="diagram-card">
+      <div class="diagram-img">
+        <img src="photosynthesis_process.jpg" alt="Photosynthesis">
+      </div>
+      <div class="diagram-info">
+        <h3>Photosynthesis Process</h3>
+        <p>Diagram illustrating the process of photosynthesis including light-dependent and light-independent reactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
         <!-- Practice Questions Section -->
         <section id="questions-section" class="content-section">
@@ -1229,7 +1246,7 @@
             </div>
         </section>
 
-        <!-- Famous Biologists Section -->
+       <!-- Famous Biologists Section -->
         <section id="biologists-section" class="content-section">
             <button class="back-btn" onclick="showSection('home')"><i class="fas fa-arrow-left"></i> Back to Home</button>
             <h2 class="section-title">Pioneers of Biology</h2>
@@ -1252,7 +1269,7 @@
                 <!-- Gregor Mendel -->
                 <div class="biologist-card">
                     <div class="biologist-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Gregor_Mendel_2.jpg/800px-Gregor_Mendel_2.jpg" alt="Gregor Mendel">
+                        <img src="gr.jpg" alt="Gregor Mendel">
                         <div class="biologist-name">
                             <h3>Gregor Mendel</h3>
                             <div class="years">1822-1884</div>
@@ -1266,7 +1283,7 @@
                 <!-- Rosalind Franklin -->
                 <div class="biologist-card">
                     <div class="biologist-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Rosalind_Franklin.jpg/800px-Rosalind_Franklin.jpg" alt="Rosalind Franklin">
+                        <img src="ro.jpg" alt="Rosalind Franklin">
                         <div class="biologist-name">
                             <h3>Rosalind Franklin</h3>
                             <div class="years">1920-1958</div>
@@ -1280,7 +1297,7 @@
                 <!-- James Watson & Francis Crick -->
                 <div class="biologist-card">
                     <div class="biologist-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Watson-Crick.jpg/800px-Watson-Crick.jpg" alt="Watson and Crick">
+                        <img src="wat_and_crick.jpg" alt="Watson and Crick">
                         <div class="biologist-name">
                             <h3>Watson & Crick</h3>
                             <div class="years">1928- & 1916-2004</div>
@@ -1508,6 +1525,34 @@
                 return;
             }
             
+            // Define unit categories
+            const categories = {
+                length: ['micrometer', 'millimeter', 'centimeter', 'meter'],
+                volume: ['microliter', 'milliliter', 'liter'],
+                temperature: ['celsius', 'fahrenheit'],
+                mass: ['gram', 'milligram', 'microgram']
+            };
+            
+            // Find categories for both units
+            let fromCategory = null;
+            let toCategory = null;
+            
+            for (const [category, units] of Object.entries(categories)) {
+                if (units.includes(fromUnit)) fromCategory = category;
+                if (units.includes(toUnit)) toCategory = category;
+            }
+            
+            // Check if units are comparable
+            if (fromCategory !== toCategory) {
+                document.getElementById('result').innerHTML = `
+                    <div style="color: #F44336; font-weight: bold;">
+                        Units are incomparable!<br>
+                        Cannot convert ${fromUnit} to ${toUnit}
+                    </div>
+                `;
+                return;
+            }
+            
             let result;
             
             // Length conversions
@@ -1570,7 +1615,7 @@
             } else if (fromUnit === 'microgram' && toUnit === 'milligram') {
                 result = value / 1000;
             } else {
-                result = value; // Default to same value if conversion not implemented
+                result = value; // Same unit
             }
             
             // Format the result
@@ -1603,3 +1648,51 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
